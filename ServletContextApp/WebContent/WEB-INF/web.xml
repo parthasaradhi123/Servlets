@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:mysql:///started</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>Root@143</param-value>
+  </context-param>
+  
+  
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>Partha.Controller.TestServlet</servlet-class>
+    <load-on-startup>7</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/disp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Test1Servlet</display-name>
+    <servlet-name>Test1Servlet</servlet-name>
+    <servlet-class>Partha.Controller.Test1Servlet</servlet-class>
+        <load-on-startup>6</load-on-startup>
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test1Servlet</servlet-name>
+    <url-pattern>/ok</url-pattern>
+  </servlet-mapping>
+
+</web-app>
